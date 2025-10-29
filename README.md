@@ -91,6 +91,7 @@ jobs:
 This workflow ensures that your tests pass before merging any new code.
 
 ## 📁 Project Structure
+
 ```
 .
 ├── src/
@@ -107,6 +108,7 @@ This workflow ensures that your tests pass before merging any new code.
 └── README.md
 
 ```
+
 ## 📜 License
 
-MIT © 2025 Your Name
+MIT © 2025 Grace Akpan

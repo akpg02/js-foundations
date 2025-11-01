@@ -12,6 +12,11 @@ A lightweight JavaScript utility library providing essential helpers for clampin
 | **`once(fn)`**           | Ensures a function can only be called once.          | `const init = once(setup); init(); init();` |
 | **`sum(arr)`**           | Returns the total of all numeric values in an array. | `sum([1, 2, 3]) → 6`                        |
 | **`uniq(arr)`**          | Removes duplicate elements from an array.            | `uniq([1, 2, 2, 3]) → [1, 2, 3]`            |
+| **`Callback`**           | Function passed as argument                          | `fs.readFile(path, cb)`                     |
+| **`Promise`**            | Represents future value                              | `new Promise((res,rej)=>{})`                |
+| **`async/await`**        | Syntactic sugar for Promises                         | `await fetchJSON(url)`                      |
+| **`Mocking`**            | Replacing dependencies in tests                      | `jest.mock("fs/promises")`                  |
+| **`Fake Timers`**        | Speeding up time in tests                            | `jest.useFakeTimers()`                      |
 
 ---
 
@@ -39,16 +44,6 @@ console.log(uniq([1, 1, 2, 3, 3])); // [1, 2, 3]
 
 ```
 npm test
-```
-
-### Example test structure
-
-```
-tests/
-├── clamp.test.js
-├── once.test.js
-├── sum.test.js
-└── uniq.test.js
 ```
 
 Each test ensures correctness and edge-case coverage (e.g., invalid types, empty arrays, or out-of-range values).
@@ -88,26 +83,7 @@ jobs:
 
 ```
 
-This workflow ensures that your tests pass before merging any new code.
-
-## 📁 Project Structure
-
-```
-.
-├── src/
-│   ├── clamp.js
-│   ├── once.js
-│   ├── sum.js
-│   └── uniq.js
-├── tests/
-│   ├── clamp.test.js
-│   ├── once.test.js
-│   ├── sum.test.js
-│   └── uniq.test.js
-├── package.json
-└── README.md
-
-```
+This workflow ensures that the tests pass before merging any new code.
 
 ## 📜 License
 
